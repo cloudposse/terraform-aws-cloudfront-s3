@@ -63,7 +63,7 @@ variable "origin_force_destroy" {
 
 variable "compress" {
   type        = bool
-  default     = false
+  default     = true
   description = "Compress content for web requests that include Accept-Encoding: gzip in the request header"
 }
 
