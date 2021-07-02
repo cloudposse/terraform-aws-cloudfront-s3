@@ -295,7 +295,7 @@ resource "aws_s3_bucket_public_access_block" "origin" {
 
 module "logs" {
   source                   = "cloudposse/s3-log-storage/aws"
-  version                  = "0.20.0"
+  version                  = "0.21.0"
   enabled                  = local.create_cf_log_bucket
   attributes               = var.extra_logs_attributes
   lifecycle_prefix         = local.cloudfront_access_log_prefix
