@@ -494,8 +494,8 @@ resource "aws_cloudfront_distribution" "default" {
       cached_methods     = ordered_cache_behavior.value.cached_methods
       target_origin_id   = ordered_cache_behavior.value.target_origin_id == "" ? local.origin_id : ordered_cache_behavior.value.target_origin_id
       compress           = ordered_cache_behavior.value.compress
-      trusted_signers    = var.trusted_signers
-      trusted_key_groups = var.trusted_key_groups
+      trusted_signers    = ordered_cache_behavior.value.trusted_signers
+      trusted_key_groups = ordered_cache_behavior.value.trusted_key_groups
 
       cache_policy_id          = ordered_cache_behavior.value.cache_policy_id
       origin_request_policy_id = ordered_cache_behavior.value.origin_request_policy_id

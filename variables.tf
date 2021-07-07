@@ -358,9 +358,11 @@ variable "ordered_cache" {
     target_origin_id = string
     path_pattern     = string
 
-    allowed_methods = list(string)
-    cached_methods  = list(string)
-    compress        = bool
+    allowed_methods    = list(string)
+    cached_methods     = list(string)
+    compress           = bool
+    trusted_signers    = list(string)
+    trusted_key_groups = list(string)
 
     cache_policy_id          = string
     origin_request_policy_id = string
